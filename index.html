@@ -1,96 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Acme — Modern Landing Page</title>
-  <meta name="description" content="Acme — beautiful modern landing page template." />
-  <meta name="author" content="Acme Templates" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{--bg:#0f1724;--card:#0b1220;--muted:#98a3b3;--accent:#6ee7b7;--accent-2:#60a5fa;--glass:rgba(255,255,255,0.03);--glass-2:rgba(255,255,255,0.02);--radius:14px;--max-width:1100px;--shadow:0 8px 30px rgba(2,6,23,0.6);--text:#E6EEF5;color-scheme:dark}
-    [data-theme="light"]{--bg:#f7fafc;--card:#ffffff;--muted:#546174;--accent:#0ea5a1;--accent-2:#2563eb;--glass:rgba(2,6,23,0.03);--glass-2:rgba(2,6,23,0.02);--shadow:0 10px 30px rgba(16,24,40,0.08);--text:#0b1220;color-scheme:light}
-    *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui;background:linear-gradient(180deg,var(--bg),rgba(0,0,0,0.02));color:var(--text);line-height:1.45;padding:48px 20px;display:flex;justify-content:center;align-items:flex-start;min-height:100vh}
-    .wrap{max-width:var(--max-width);width:100%}
-    header.nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
-    .brand{display:flex;gap:12px;align-items:center;text-decoration:none;color:var(--text)}
-    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:grid;place-items:center;font-weight:800;color:#06202a}
-    nav.main{display:flex;gap:18px;margin-left:auto}
-    nav.main a{color:var(--muted);text-decoration:none;font-weight:600;padding:8px 12px;border-radius:10px}
-    nav.main a:hover{color:var(--text);background:var(--glass)}
-    .cta{padding:10px 14px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#021018;border-radius:10px;font-weight:700;text-decoration:none;box-shadow:var(--shadow)}
-    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;margin-bottom:36px}
-    .hero-card{background:linear-gradient(180deg,var(--card),var(--glass));padding:34px;border-radius:var(--radius);box-shadow:var(--shadow)}
-    .eyebrow{display:inline-block;background:var(--glass-2);padding:6px 10px;border-radius:999px;color:var(--muted);font-weight:700;margin-bottom:12px}
-    h1{margin:6px 0 14px;font-size:clamp(1.8rem,3vw,2.6rem)}
-    p.lead{color:var(--muted);margin:0 0 22px}
-    .btn{padding:12px 16px;border-radius:12px;background:var(--accent);color:#031b15;font-weight:700;text-decoration:none}
-    .btn.secondary{background:transparent;color:var(--text);border:1px solid rgba(255,255,255,0.04)}
-    .stat-grid{display:flex;gap:12px;margin-top:18px}
-    .stat{background:var(--glass);padding:10px 12px;border-radius:10px;font-weight:700}
-    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:36px}
-    .feature-card{background:var(--card);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
-    .feature-card h3{margin:8px 0 6px}.feature-card p{color:var(--muted);margin:0}
-    .portfolio{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:36px}
-    .project{border-radius:12px;overflow:hidden;background:var(--card);border:1px solid rgba(255,255,255,0.02)}
-    .project .meta{padding:12px}.project h4{margin:0 0 6px}.project p{margin:0;color:var(--muted)}
-    .testimonials{display:flex;gap:14px;align-items:center;margin-bottom:36px}
-    .testimonial{background:var(--card);padding:18px;border-radius:12px;flex:1}
-    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:36px}
-    .price-card{padding:20px;border-radius:12px;background:var(--card);border:1px solid rgba(255,255,255,0.02);display:flex;flex-direction:column;gap:12px}
-    .contact{display:grid;grid-template-columns:1fr 340px;gap:18px;margin-bottom:36px}
-    form.contact-form{background:var(--card);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
-    input,textarea{width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)}
-    footer{display:flex;justify-content:space-between;align-items:center;padding:16px 0;color:var(--muted)}
-    @media(max-width:1040px){.hero{grid-template-columns:1fr}.portfolio{grid-template-columns:repeat(2,1fr)}.features{grid-template-columns:repeat(2,1fr)}.contact{grid-template-columns:1fr}nav.main{display:none}}
-    @media(max-width:680px){.portfolio,.features{grid-template-columns:1fr}body{padding:20px}}
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acme Solutions - Home</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="wrap">
-    <header class="nav">
-      <a class="brand" href="#"><div class="logo">A</div><div><div style="font-weight:800">Acme</div><div style="font-size:12px;color:var(--muted)">Design · Web</div></div></a>
-      <nav class="main"><a href="#features">Features</a><a href="#portfolio">Portfolio</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a></nav>
-      <a class="cta" href="#contact">Get started</a>
-    </header>
-    <section class="hero">
-      <div class="hero-card">
-        <span class="eyebrow">New • 2025</span>
-        <h1>Beautiful, blazing-fast websites.</h1>
-        <p class="lead">We craft pixel-perfect interfaces and delightful experiences.</p>
-        <a class="btn" href="#contact">Start free</a> <a class="btn secondary" href="#pricing">Pricing</a>
-        <div class="stat-grid"><div class="stat">⚡ 98% Lighthouse</div><div class="stat">🏆 2400+ teams</div></div>
-      </div>
-    </section>
-    <section id="features"><h2>Features</h2>
-      <div class="features">
-        <div class="feature-card"><h3>Performance-first</h3><p>Minimal runtime and great Core Web Vitals.</p></div>
-        <div class="feature-card"><h3>Design system</h3><p>Reusable components and tokens.</p></div>
-        <div class="feature-card"><h3>Accessibility</h3><p>Semantic HTML and keyboard-first design.</p></div>
-      </div>
-    </section>
-    <section id="portfolio"><h2>Portfolio</h2>
-      <div class="portfolio">
-        <div class="project"><div style="height:160px;background:var(--accent)"></div><div class="meta"><h4>Project A</h4><p>Analytics dashboard</p></div></div>
-        <div class="project"><div style="height:160px;background:var(--accent-2)"></div><div class="meta"><h4>Project B</h4><p>Marketing landing</p></div></div>
-        <div class="project"><div style="height:160px;background:#fb7185"></div><div class="meta"><h4>Project C</h4><p>Design system</p></div></div>
-      </div>
-    </section>
-    <section id="pricing"><h2>Pricing</h2>
-      <div class="pricing">
-        <div class="price-card"><h3>Starter</h3><div>₹19 /mo</div><p>For small teams</p><a class="btn" href="#contact">Choose</a></div>
-        <div class="price-card"><h3>Pro</h3><div>₹49 /mo</div><p>For growing teams</p><a class="btn" href="#contact">Choose</a></div>
-        <div class="price-card"><h3>Enterprise</h3><div>₹99 /mo</div><p>Custom solutions</p><a class="btn" href="#contact">Contact</a></div>
-      </div>
-    </section>
-    <section id="contact"><h2>Contact</h2>
-      <div class="contact">
-        <form class="contact-form"><input type="text" placeholder="Your name" required><input type="email" placeholder="Email" required><textarea rows="4" placeholder="Message"></textarea><button class="btn" type="submit">Send</button></form>
-        <div><p>Email: hello@acme.example</p><p>Office: Mumbai, India</p></div>
-      </div>
-    </section>
-    <footer><div>© <span id="year"></span> Acme</div><div>Made with ♥</div></footer>
+  <!-- Loader -->
+  <div class="loader">
+    <div class="spinner"></div>
+    <p>Loading...</p>
   </div>
-  <script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+
+  <header>
+    <div class="logo">Acme</div>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="toggle" id="darkToggle">🌙</button>
+  </header>
+
+  <main class="page reveal-page">
+    <section class="hero">
+      <h1>Welcome to Acme Solutions</h1>
+      <p>We build modern, scalable, and engaging digital experiences.</p>
+      <a href="services.html" class="btn primary">Explore Services</a>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Acme Solutions. All rights reserved.
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
