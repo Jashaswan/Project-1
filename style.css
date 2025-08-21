@@ -1,0 +1,113 @@
+:root {
+  --primary: #2563eb;
+  --secondary: #06b6d4;
+  --dark: #0f172a;
+  --light: #f8fafc;
+  --radius: 12px;
+  --shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--light);
+  color: var(--dark);
+  transition: background 0.4s, color 0.4s;
+}
+body.dark { background: var(--dark); color: var(--light); }
+
+/* Loader */
+.loader {
+  position: fixed;
+  inset: 0;
+  background: var(--light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2000;
+}
+body.dark .loader { background: var(--dark); }
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #ccc;
+  border-top: 5px solid var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 8%;
+  background: white;
+  position: sticky; top: 0;
+  z-index: 100;
+}
+body.dark header { background: #1e293b; }
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: inherit;
+}
+nav a.active { color: var(--primary); }
+
+/* Buttons */
+.btn {
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+}
+.btn.primary {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  box-shadow: var(--shadow);
+}
+
+/* Page */
+main.page {
+  padding: 80px 8%;
+  min-height: 80vh;
+}
+.hero {
+  text-align: center;
+  padding: 100px 0;
+}
+.hero h1 { font-size: 2.5rem; margin-bottom: 20px; }
+.portfolio-grid {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.portfolio-grid img {
+  width: 300px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* Dark Mode Toggle */
+.toggle {
+  background: none;
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  color: var(--primary);
+}
+
+/* Page Opening Animation */
+.reveal-page {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: pageEnter 1s ease forwards;
+}
+@keyframes pageEnter {
+  to { opacity: 1; transform: translateY(0); }
+}
